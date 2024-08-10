@@ -10,8 +10,8 @@ const ToDoList = ({ todos }) => {
     <ol>
       {todos.map((todo, index) => (
         <ToDoItem
-          key={index}
-          id={index}
+          key={todo.id}
+          id={todo.id}
           title={todo.title}
           text={todo.text}
           completed={todo.completed}

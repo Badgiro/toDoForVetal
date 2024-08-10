@@ -7,7 +7,8 @@ const { isCompleted } = styles;
 const ToDoItem = ({ title, text, id, completed }) => {
   return (
     <li className={completed ? isCompleted : null}>
-      <h2>{title}</h2> <p>{text}</p>{" "}
+      <h2>{title}</h2> <p>{text}</p>
+      {id}
     </li>
   );
 };

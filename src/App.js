@@ -1,42 +1,19 @@
 import React, { useState } from "react";
-import Item from "./components/item/Items";
-import InputAndButtons from "./components/input/InputAndButtons";
-import styles from "./app.module.css";
-import ToDoList from "./components/toDoList";
 
-const todosList = [
-  {
-    id: 1,
-    title: "play chess",
-    text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et turpis ac justo tristique lobort",
-    completed: true,
-  },
-  {
-    id: 2,
-    title: "play chess 2",
-    text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et turpis ac justo tristique lobort",
-    completed: false,
-  },
-];
+import ToDoList from "./components/toDoList";
+import Form from "./components/form";
+
+import styles from "./app.module.css";
+import Empty from "./components/empty";
 
 function App() {
-  const [tasks, setTasks] = useState(todosList);
+  const [tasks, setTasks] = useState([]);
   const [targetTask, setTargetTask] = useState("");
-
-  const addTask = () => {
-    setTasks([...tasks, targetTask]);
-  };
-  console.log(tasks);
 
   return (
     <div className={styles.App}>
-      <InputAndButtons
-        setTargetTask={setTargetTask}
-        addTask={addTask}
-        targetTask={targetTask}
-        setTasks={setTasks}
-      />
-      <ToDoList todos={tasks} />
+      <Form setTasks={setTasks} />
+      {tasks.length !== 0 ? <ToDoList todos={tasks} /> : <Empty />}
     </div>
   );
 }
