@@ -1,0 +1,61 @@
+.addBtn {
+  border: 0px;
+  background-color: rgb(10, 180, 55);
+  font-size: 16px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+.addBtn:hover {
+  background-color: rgb(90, 170, 45);
+}
+
+.removeBtn {
+  border: 0px;
+  background-color: rgb(215, 55, 55);
+  font-size: 16px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+.removeBtn:hover {
+  background-color: rgb(195, 45, 45);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input:hover {
+  border-color: #555;
+  outline: none;
+}
+
+.input:hover {
+  background-color: #e0e0e0;
+}
+.input::placeholder {
+  color: #888;
+  opacity: 1; /* Ensures placeholder text is fully opaque */
+}
+.input:disabled {
+  background-color: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.buttons {
+  margin-top: 90px;
+}
