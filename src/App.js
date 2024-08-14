@@ -13,7 +13,11 @@ function App() {
   return (
     <div className={styles.App}>
       <Form setTasks={setTasks} />
-      {tasks.length !== 0 ? <ToDoList todos={tasks} /> : <Empty />}
+      {tasks.length !== 0 ? (
+        <ToDoList setTodos={setTasks} todos={tasks} />
+      ) : (
+        <Empty />
+      )}
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.deleteButton {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Стиль для кнопки при наведении */
+.deleteButton:hover {
+  background-color: #c0392b;
+}
+
+/* Стиль для кнопки при нажатии */
+.deleteButton:active {
+  background-color: #a93226;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Стиль для кнопки при фокусе */
+.deleteButton:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.6);
+}

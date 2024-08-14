@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./style.module.css";
+import Button from "../button";
+import DeleteButon from "./deleteItem/DeleteButon";
 
-const { isCompleted } = styles;
+const { styleIsCompleted } = styles;
 
-const ToDoItem = ({ title, text, id, completed }) => {
+const ToDoItem = ({ title, text, id, completed, deleteTodo }) => {
+  const [isCompleted, setIsCompleted] = useState(completed);
+
+  const toggleCompleted = () => {
+    setIsCompleted(!isCompleted);
+  };
   return (
-    <li className={completed ? isCompleted : null}>
+    <li className={isCompleted ? styleIsCompleted : null}>
       <h2>{title}</h2> <p>{text}</p>
-      {id}
+      <DeleteButon onClick={() => deleteTodo(id)}>Удалить</DeleteButon>
+      <Button onClick={toggleCompleted}>
+        {isCompleted ? "Сделано" : "Не сделано"}
+      </Button>
     </li>
   );
 };

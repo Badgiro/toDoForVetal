@@ -38,13 +38,17 @@ const Form = ({ setTasks }) => {
     } else {
       newError["text"] = null;
     }
+
     setError(newError);
-    console.log(newError);
 
-    console.log(error);
-
-    setTasks((prev) => [...prev, newTodo]);
+    if (!newError.title && !newError.text) {
+      const tasks = setTasks((prev) => [...prev, newTodo]);
+      setTitle("");
+      setText("");
+      ;
+    }
   };
+
   const onSubmit = (e) => {
     e.preventDefault();
     onClick();
@@ -57,8 +61,11 @@ const Form = ({ setTasks }) => {
         value={title}
         onChange={onChangeTitle}
       />
+      {error?.title}
       <br />
       <Input placeholder="Текст туду" value={text} onChange={onChangeText} />
+      {error?.text}
+
       <br />
 
       <Button type="submit">Отправить</Button>

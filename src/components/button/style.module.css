@@ -1,0 +1,28 @@
+.button {
+  background-color: #46952a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Стиль для кнопки при наведении */
+.button:hover {
+  background-color: #41da1f;
+}
+
+/* Стиль для кнопки при нажатии */
+.button:active {
+  background-color: #11871f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Стиль для кнопки при фокусе */
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.6);
+}
